@@ -1,0 +1,51 @@
+1) C
+2) D
+3) C
+4) D
+5) C
+6) B
+7) B
+
+8) A
+9) A,C,D
+10)C
+
+Q.11) Outliers are values that differ extremely with the present distribution of the data. They can be human errors or experimental errors.
+For example lets assume there is data of age of people which ranges from 10 to 60 years. But by mistake some values are negative or more than 100 or 1000
+which is impossible as the age of a person cannot be negative or more than 150. That is why called as outliers,which needs to be removed. To detect outliers
+one of the method called inner quartile range(IQR). Also called as midspread,middle 50% . The data is divided into different parts called quarters.
+First,second,third and denoted by Q1,Q2 and Q3. The data is ordered from lowest to highest and divided into quarters. The IQR range gives middle values and is
+the difference between third quarter(upper) and first quarter (lower) i.e. IQR=Q3-Q1. Thus IQR provides mid values which are free of outliers.
+ 
+Q.12) Bagging: In bagging first the whole data is divided into sub data. The distribution is with replacement. Then this data is fed to different base models
+(normally decision tree) who gets trained on that sub data parallely. Test data is fed and every model gives different output as per model accuracy. In case of 
+classification, the result is given by voting classifier which means high voted class given as the output. In case of regression problems output is the average or median
+of the results achieved by different models. 
+Boosting: whereas in boosting,models are built sequentially. Entire data is fed to base model and then the wrongly predicted data has given more weightage as compared to
+correctly classified and fed to another model. This loop repeats if user provides estimators or upto certain accuracy is achieved.
+
+Q.13 ) R-square basically explains the degree to which our input explains the variation to the output variable. Higher R sqaure means that amount of variation in the 
+output is explained by the input variable. So higher R square ,higher variation explained and better is the model.However they either increase or remains same with addition
+of more variables which is not good. So adjusted R square penalizes if the added variables do not improve our existing model. So it is suggested to use adjusted R-square 
+if one is building linear regression on multiple variables.
+Multiple R-squared = 1 – SSE/SST
+SSE is the sum of square of residuals. Residual is the difference between the predicted value and the actual value.
+SST is the total sum of squares. It is calculated by summing the squares of difference between the actual value and the mean value.
+
+Q.14 ) standardization:
+              It is a pre-processing technique which is used to transform high valued data to low range. When some of the features of data has different units 
+ex. cm,mm and other has units like pound or kilometers then the model tend to give more weightage to the features which have
+high range as compared to others. So to overcome this problem we bring them to uniform range using standardization.
+It is done before applying PCA, before KNN ,before clustering etc. Techniques used is z-score.
+Z=(value-mean)/(standard deviation)
+
+Normalization: It is a data processing technique in which different scaled data is transformed into common scale without disturbing range or loss of the information.
+It is only required when features have different range.
+Normalization typically means rescales the values into a range of [0,1]. Standardization typically means rescales data to have a mean of 0 and a standard deviation of 1.
+
+Q.15 ) Cross validation also called K-fold cross validation is technique to reduce overfitting. In this technique train data is divided into k no. of samples. At first one sample
+is reserved for testing and other samples i.e. k-1 are trained. In next iteration second sample is tested while others are trained. This procedure repeats for k no. of times. Each 
+iteration gives one score and the model score is the mean of all output scores. 
+Advantages: proportion of validation is not dependent on the k folds. Reduces overfitting problem.
+Disadvantages: It might happen that same observation can be repeated more times and also some observations can be missed.
+computation time increases. 
